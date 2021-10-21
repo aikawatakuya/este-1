@@ -14,7 +14,7 @@
     padding: 10px 20px;
     border-right: 2px solid $cBlack;
     height: 120px;
-    transition: all .5s;
+    transition: all 0.5s;
     border-bottom: 1px solid $cGray;
 
     & span {
@@ -51,7 +51,7 @@
         left: 0;
         right: 0px;
         margin: auto;
-        content: '';
+        content: "";
         display: block;
         text-align: center;
         height: 20px;
@@ -66,7 +66,7 @@
 
       & a {
         &::before {
-          background-image: url(/images/common/icon-tel.png);
+          background-image: url(../images/common/icon-tel.png);
         }
       }
     }
@@ -76,7 +76,7 @@
 
       & a {
         &::before {
-          background-image: url(/images/common/icon-link-1-black.png);
+          background-image: url(../images/common/icon-link-1-black.png);
         }
       }
     }
@@ -84,11 +84,11 @@
 
   .js-left {
     clip-path: inset(0 80% 0 0);
-    transition: all .4s;
+    transition: all 0.4s;
 
     &.visible {
       clip-path: inset(0);
-      transition: all .4s;
+      transition: all 0.4s;
     }
   }
 
@@ -104,7 +104,7 @@
   bottom: 0;
   left: 0;
   background-color: $cWhite;
-  opacity: .7;
+  opacity: 0.7;
   height: 10vh;
   width: 100%;
   z-index: 2000;
