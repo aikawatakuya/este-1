@@ -1918,15 +1918,6 @@ body.hidden {
   z-index: 3000;
 }
 
-@media (max-width: 959px) {
-  .p-header {
-    height: 64px;
-  }
-  .p-header .pc-container {
-    display: none;
-  }
-}
-
 .p-header .sp-navbtn {
   position: fixed;
   bottom: 0;
@@ -1975,18 +1966,6 @@ body.hidden {
   text-decoration: underline;
 }
 
-@media (min-width: 960px) {
-  .p-header {
-    height: 100px;
-  }
-  .p-header .mobile-container {
-    display: none;
-  }
-  .p-header .sp-navbtn {
-    display: none;
-  }
-}
-
 .p-header .hide.sp-navbtn {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -1994,8 +1973,25 @@ body.hidden {
   transition: all 0.4s;
 }
 
+@media (max-width: 959px) {
+  .p-header {
+    height: 64px;
+  }
+  .p-header .pc-container {
+    display: none;
+  }
+}
+
 @media (min-width: 960px) {
-  .pc-container {
+  .p-header {
+    height: 100px;
+  }
+  .p-header .mobile-container,
+  .p-header .sp-navbtn,
+  .p-header .mobile-menu {
+    display: none;
+  }
+  .p-header .pc-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -2013,42 +2009,42 @@ body.hidden {
     height: 100px;
     background-color: rgba(255, 255, 255, 0.9);
   }
-  .pc-container .pc-nav {
+  .p-header .pc-container .pc-nav {
     margin-bottom: 10px;
   }
-  .pc-container .pc-nav-list {
+  .p-header .pc-container .pc-nav-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .pc-container .pc-nav-item {
+  .p-header .pc-container .pc-nav-item {
     font-size: 16px;
     padding-top: 20px;
     padding-right: 3.5vw;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .pc-container .pc-nav-item a {
+  .p-header .pc-container .pc-nav-item a {
     color: #272727;
   }
-  .pc-container .pc-nav-item:hover {
+  .p-header .pc-container .pc-nav-item:hover {
     -webkit-transform: translateY(4px);
             transform: translateY(4px);
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .pc-container .pc-nav-item small {
+  .p-header .pc-container .pc-nav-item small {
     color: #dbd4bd;
     display: block;
     text-align: center;
     font-size: 14px;
   }
-  .pc-container .pc-contact {
+  .p-header .pc-container .pc-contact {
     position: absolute;
     top: 2px;
     right: 10px;
   }
-  .pc-container .pc-contact a {
+  .p-header .pc-container .pc-contact a {
     position: relative;
     background-color: #968a64;
     padding: 8px 20px 8px 30px;
@@ -2058,13 +2054,13 @@ body.hidden {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .pc-container .pc-contact a:hover {
+  .p-header .pc-container .pc-contact a:hover {
     -webkit-transform: translateY(4px);
             transform: translateY(4px);
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .pc-container .pc-contact .pc-tel::before {
+  .p-header .pc-container .pc-contact .pc-tel::before {
     position: absolute;
     top: 0;
     left: 5px;
@@ -2077,7 +2073,7 @@ body.hidden {
     background-size: contain;
     background-repeat: no-repeat;
   }
-  .pc-container .pc-contact .pc-net::before {
+  .p-header .pc-container .pc-contact .pc-net::before {
     position: absolute;
     top: 0;
     left: 5px;
@@ -2090,11 +2086,11 @@ body.hidden {
     background-size: contain;
     background-repeat: no-repeat;
   }
-  .pc-container .logo__img {
+  .p-header .pc-container .logo__img {
     display: inline-block;
     margin: 15px 10px 20px 20px;
   }
-  .pc-container .logo__img .logo {
+  .p-header .pc-container .logo__img .logo {
     width: 160px;
   }
 }
